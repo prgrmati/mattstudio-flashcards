@@ -1,0 +1,25 @@
+:root {
+    --white01: #fbfbfd;
+    --beige: #ffefc8;
+    --black01: #00000029;
+    --black02: #232222;
+    --gray01: #cccccc;
+    --green01: #47e147a3;
+}
+
+main {
+    max-width: 90vw;
+    margin: 0 auto;
+    width: 100%;
+    background-color: var(--white01);
+    padding-bottom: calc(1em + env(safe-area-inset-bottom));
+}
+
+body {
+    background-color: var(--white01);
+    font-family: 'Rubik', sans-serif;
+}
+
+.hidden {
+    display: none !important;
+}

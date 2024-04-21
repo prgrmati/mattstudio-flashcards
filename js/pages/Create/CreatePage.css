@@ -1,0 +1,157 @@
+.create-flashcard-group-preview {
+    display: flex;
+    gap: 1rem;
+    display: flex;
+    gap: 1rem;
+    background-color: var(--beige);
+    border-radius: 16px;
+    padding: 1rem;
+    border: 1px solid var(--black01);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+    position: relative;
+
+    .flashcard-left-col {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+
+        strong {
+            font-size: 18px;
+            margin-left: -25px;
+        }
+    }
+
+    .flashcard-right-col {
+        .flashcard-count-image {
+            max-width: 25px;
+        }
+
+        .count-info {
+            border-radius: 16px;
+            height: fit-content;
+            padding: 0.2rem .5rem;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 0.2rem;
+            position: absolute;
+            border: none;
+            top: 5px;
+            right: 5px;
+
+            .flashcard-count-image {
+                max-width: 18px;
+            }
+        }
+    }
+
+    .flashcards-icons {
+        img {
+            max-width: 70px;
+        }
+    }
+
+    .flashcard-group-image:nth-child(2) {
+        background-color: var(--beige);
+        z-index: 1;
+        transform: translate(-56%, -29%) rotate(-10deg);
+    }
+
+    .flashcard-group-image:nth-child(3) {
+        background-color: var(--beige);
+        z-index: 2;
+        transform: translate(-80%, -80%) rotate(10deg);
+    }
+}
+
+.create-flashcard-group-fields-wrapper {
+    input[type="text"] {
+        height: 40px;
+        padding-right: 12px;
+        padding-left: 12px;
+        background-color: var(--white01);
+        border-color: var(--black01);
+        border-radius: 6px;
+        margin-top: 10px;
+        border: 1px solid var(--black01);
+        width: 100%;
+        max-width: -webkit-fill-available;
+    }
+
+    .color-choices-wrapper {
+        margin-top: 10px;
+
+        .color-choices {
+            display: flex;
+            gap: .5rem;
+            flex-wrap: nowrap;
+            margin-top: .5rem;
+
+            >div {
+                height: 40px;
+                width: 40px;
+                background-color: var(--beige);
+                border-radius: 6px;
+            }
+        }
+    }
+
+
+    .new-cards-wrapper {
+        margin-top: 20px;
+
+        .single-card {
+            padding-bottom: 10px;
+        }
+
+        .single-card:not(:last-of-type) {
+            border-bottom: 1px solid var(--black01);
+        }
+    }
+
+    #add-new-card {
+        width: 100%;
+        background-color: transparent;
+        border: 1px solid var(--black01);
+        height: 40px;
+        border-radius: 6px;
+        font-weight: bold;
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+}
+
+.btn-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+
+    >.action-btn {
+        flex: 1;
+        background-color: transparent;
+        border: 1px solid var(--black01);
+        height: 40px;
+        border-radius: 6px;
+        font-weight: bold;
+        font-size: 12px;
+        text-transform: uppercase;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .save-btn {
+        background-color: palegreen;
+    }
+
+    .cancel-btn {
+        background-color: lightsalmon;
+        color: var(--white01);
+    }
+}

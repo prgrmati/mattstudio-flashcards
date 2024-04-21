@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Vanilla Flashcards</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+
+    <script src="js/app.js" type="module" defer></script>
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="manifest" href="app.webmanifest">
+</head>
+
+<body>
+    <main></main>
+
+    <div class="container">
+        <template id="dashboard-page-template">
+            <div class="dashboard-header">
+                <div id="profile-component"></div>
+                <div id="date-component"></div>
+            </div>
+
+            <div class="dashboard-content">
+                <h3>Flashcards</h3>
+                <a class="router-link" href="/create">
+                    <div class="add-new-wrapper" role="button">
+                        <img width="50" height="50" src="/img/icons/add.png" alt="Add image">
+                        <strong>Add new</strong>
+                    </div>
+                </a>
+                <div class="flashcard-groups-wrapper">
+                    <div id="flashcard-groups"></div>
+                </div>
+            </div>
+        </template>
+
+        <template id="switch-page-template">
+            <div class="container-bg">
+                <div class="top-bar-wrapper">
+                    <a href="/" class="router-link">
+                        <img src="/img/icons/cross-simple.png" width="30" height="30" alt="Back">
+                    </a>
+    
+                    <div id="progress-component"></div>
+                </div>
+
+                <div id="flashcard">
+                    <div class="front">
+                        <strong data-front-text>Front</strong>
+                    </div>
+                    <div class="back">
+                        <strong data-back-text>Back of the card</strong>
+                    </div>
+                </div>
+
+                <div id="summary-component"></div>
+
+                <div class="btn-actions" id="switch-btn-actions">
+                    <button id="uncheck" class="action-btn red-btn">I do not know</button>
+                    <button id="check" class="action-btn green-btn">I know</button>
+                </div>
+
+                <div class="btn-actions hidden" id="summary-btn-actions">
+                    <a href="/" class="action-btn red-btn">Go to Dashboard</a>
+                    <button id="redo" class="action-btn green-btn">One more time</button>
+                </div>
+
+            </div>
+        </template>
+
+        <template id="flashcard-group-template">
+            <h2></h2>
+        </template>
+
+        <template id="create-page-template">
+            <h1>Create Flashcards</h1>
+
+            <div class="create-flashcard-group-preview">
+                <div class="flashcard-left-col">
+                    <div class="flashcards-icons">
+                        <img class="flashcard-group-image" src="/img/icons/cards.png" alt="Flashcard image">
+                    </div>
+                    <div>
+                        <strong id="group-name-preview">Flashcards</strong>
+                    </div>
+                </div>
+                <div class="flashcard-right-col">
+                    <div class="count-info">
+                        <span id="flashcard-count">1</span>
+                        <img class="flashcard-count-image" width="18" height="20" src="/img/icons/flashcard.png" alt="Flashcard image">
+                    </div>
+                </div>
+            </div>
+
+            <div class="create-flashcard-group-fields-wrapper">
+                <input type="text" placeholder="Name of the group" id="group-name">
+                <div class="color-choices-wrapper">
+                    <strong>Color</strong>
+                    <div class="color-choices">
+                        <div data-color="FFA07A"></div>
+                        <div data-color="FFD700"></div>
+                        <div data-color="FFFFE0"></div>
+                        <div data-color="98FB98"></div>
+                        <div data-color="ADD8E6"></div>
+                        <div data-color="D8BFD8"></div>
+                    </div>
+                </div>
+                <div class="new-cards-wrapper">
+                    <strong>Cards</strong>
+                    <div class="single-card">
+                        <input type="text" data-front placeholder="front">
+                        <input type="text" data-back placeholder="back">
+                    </div>
+                </div>
+
+                <div>
+                    <button id="add-new-card">Add new</button>
+                </div>
+            </div>
+
+            <div class="btn-actions">
+                <a href="/" class="router-link action-btn cancel-btn">Cancel</a>
+                <button id="save-flashcards" class="action-btn save-btn">Save</button>
+            </div>
+
+        </template>
+    </div>
+</body>
+
+</html>

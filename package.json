@@ -1,0 +1,16 @@
+{
+    "name": "Vanilla Flashcards",
+    "version": "1.0.0",
+    "description": "Flashcards project using Vanilla JavaScript with lowdb",
+    "author": "Mateusz Jerzyk, mattstudio",
+    "dependencies": {
+        "http-server": "^14.1.1"
+    },
+    "scripts": {
+        "format": "prettier --write \"css/**/*.css\" \"js/**/*.js\" --config ./.prettierrc",
+        "start": "http-server"
+    },
+    "devDependencies": {
+        "prettier": "^2.5.0"
+    }
+}
